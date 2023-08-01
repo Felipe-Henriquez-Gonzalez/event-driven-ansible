@@ -8,6 +8,7 @@
     - name: Say Hello
       condition: event.i == 1
       action:
-        run_playbook:
-          name: ansible.eda.hello
+        run_job_template:
+          name: Demo Job Template
+          organization: Default
 ...
