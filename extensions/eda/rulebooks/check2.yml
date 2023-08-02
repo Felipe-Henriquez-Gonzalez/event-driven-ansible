@@ -18,7 +18,7 @@
 
   rules:
     - name: Service http is not running on  web server 
-      condition: event.alert.State == "OPEN"
+      condition: "State":"OPEN"
       action:
         run_job_template:
           name: "iniciar-apache"
