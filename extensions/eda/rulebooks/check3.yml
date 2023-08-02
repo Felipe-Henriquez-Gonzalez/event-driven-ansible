@@ -8,13 +8,13 @@
         port: 5050
   
   rules:
-    - name: volver a iniciar servicio httpd
+    - name: Dynatrace volver a iniciar servicio httpd 1
       condition:    event.payload.message == "iniciar"
       action:
         run_job_template:
           name: "iniciar-apache"
           organization: "Default"
-    - name: volver a iniciar servicio httpd
+    - name: Dynatrace volver a iniciar servicio httpd 2
       condition:    event.payload.message == "State":"OPEN"
       action:
         run_job_template:
