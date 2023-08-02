@@ -9,12 +9,12 @@
         data_alerts_path:
         data_host_path: ImpactedEntityNames
         skip_original_data: true
-      filters:
-        - ansible.eda.json_filter:
-            exclude_keys:
-              - ProblemDetailsMarkdown
-              - ProblemDetailsText
-              - ProblemDetailsJSON
+#      filters:
+#        - ansible.eda.json_filter:
+#            exclude_keys:
+#              - ProblemDetailsMarkdown
+#              - ProblemDetailsText
+#              - ProblemDetailsJSON
 
   rules:
     - name: Service http is not running on  web server 
