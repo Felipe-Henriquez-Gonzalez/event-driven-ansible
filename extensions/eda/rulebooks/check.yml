@@ -1,14 +1,17 @@
 ---
-- name: Hello Events
+- name: monitoreo Dynatrace
   hosts: all
   sources:
     - dynatrace.eda.dt_esa_api:
-        dt_api_host: 5
+        dt_api_host: "https://dyx62030.apps.dynatrace.com" 
+        dt_api_token: dt0c01.A3K7UQDGHKMKH6WYRXWUWPKM 
+        delay: 1       
+        
   rules:
-    - name: Say Hello
-      condition: event.i == 1
+    - name: Service http is not running on  web server 
+      condition: event.payload.problemTitle contains "Http monitor global outage"
       action:
         run_job_template:
-          name: Demo Job Template
-          organization: Default
+          name: "iniciar-apache"
+          organization: "Default"
 ...
