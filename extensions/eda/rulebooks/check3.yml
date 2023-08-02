@@ -14,10 +14,5 @@
         run_job_template:
           name: "iniciar-apache"
           organization: "Default"
-    - name: Dynatrace volver a iniciar servicio httpd 2
-      condition:    event.payload.message == "State":"OPEN"
-      action:
-        run_job_template:
-          name: "iniciar-apache"
-          organization: "Default"
+
 ...
