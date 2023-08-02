@@ -18,7 +18,7 @@
 
   rules:
     - name: Service http is not running on  web server 
-      condition:    event.payload.message == ""State":"OPEN""
+      condition:    event.payload.message == "State":"OPEN"
       action:
         run_job_template:
           name: "iniciar-apache"
